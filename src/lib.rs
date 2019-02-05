@@ -4,7 +4,7 @@ pub struct Singleton<T> {
 
 /// Conversion
 impl<T> Singleton<T> {
-    fn new(value: T) -> Self {
+    pub fn new(value: T) -> Self {
         Self { value }
     }
 }
