@@ -3,7 +3,16 @@ name = "singleton"
 version = "0.1.0"
 authors = ["Strahinja Popovic <stralep@gmail.com>"]
 edition = "2018"
+
+description = """
+Attempt to do Efficient Programming with Components: Lecture 2 Part 1, Efficient Programming with Components: Lecture 2 Part 2 and Efficient Programming with Components: Lecture 3 Part 1 from C++ to Ruts.
+[1] https://www.youtube.com/watch?v=FUMPsmKnKv8 
+[2] https://www.youtube.com/watch?v=B5yiLvaxPS4
+[3] https://www.youtube.com/watch?v=sp_IBYVqMeQ
+"""
+
 readme = "README.md"
 repository = "https://github.com/letac/singleton"
+license = "Apache-2.0"
 
 [dependencies]
