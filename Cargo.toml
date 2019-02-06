@@ -1,6 +1,6 @@
 [package]
 name = "singleton-stepanov"
-version = "0.1.0"
+version = "0.1.1"
 authors = ["Strahinja Popovic <stralep@gmail.com>"]
 edition = "2018"
 
@@ -12,7 +12,7 @@ Attempt to do Efficient Programming with Components: Lecture 2 Part 1, Efficient
 """
 
 readme = "README.md"
-repository = "https://github.com/letac/singleton"
+repository = "https://github.com/letac/singleton-stepanov"
 license = "Apache-2.0"
 
 [dependencies]
