@@ -2,6 +2,17 @@ pub struct Singleton<T> {
     value: T,
 }
 
+impl<T> Default for Singleton<T>
+where
+    T: Default,
+{
+    fn default() -> Self {
+        Self {
+            value: Default::default(),
+        }
+    }
+}
+
 /// Conversion
 impl<T> Singleton<T> {
     pub fn new(value: T) -> Self {
