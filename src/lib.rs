@@ -1,3 +1,5 @@
+mod fmt;
+
 pub struct Singleton<T> {
     value: T,
 }
