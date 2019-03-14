@@ -1,10 +1,12 @@
 [package]
 name = "singleton-stepanov"
-version = "0.3.0"
+version = "1.0.0"
 authors = ["Strahinja Popovic <stralep@gmail.com>"]
 edition = "2018"
 
 description = """
+It isn't meant to be used by itself, but as template for your our types.
+
 Attempt to do Efficient Programming with Components: Lecture 2 Part 1, Efficient Programming with Components: Lecture 2 Part 2 and Efficient Programming with Components: Lecture 3 Part 1 from C++ to Ruts.
 [1] https://www.youtube.com/watch?v=FUMPsmKnKv8 
 [2] https://www.youtube.com/watch?v=B5yiLvaxPS4

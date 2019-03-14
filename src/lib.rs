@@ -1,80 +1,41 @@
-mod fmt;
+use std::fmt::Debug;
 
-pub struct Singleton<T> {
+#[derive(Debug, Clone, PartialEq, Eq, PartialOrd, Ord)]
+pub struct Singleton<T: Debug> {
     value: T,
 }
-
-impl<T> Default for Singleton<T>
-where
-    T: Default,
-{
-    fn default() -> Self {
-        Self {
-            value: Default::default(),
-        }
-    }
-}
-
-/// Conversion
-impl<T> Singleton<T> {
+impl<T: Debug> Singleton<T> {
     pub fn new(value: T) -> Self {
         Self { value }
     }
 }
 
-/// Conversion
-impl<T> From<T> for Singleton<T> {
-    fn from(value: T) -> Self {
+#[derive(Debug, Clone, PartialEq, Eq, PartialOrd, Ord)]
+pub struct SemiRegular<T: Debug + Clone> {
+    value: T,
+}
+impl<T: Debug + Clone> SemiRegular<T> {
+    pub fn new(value: T) -> Self {
         Self { value }
     }
 }
 
-/// Semi regular
-impl<T> Clone for Singleton<T>
-where
-    T: Clone,
-{
-    fn clone(&self) -> Self {
-        Self {
-            value: self.value.clone(),
-        }
+#[derive(Debug, Clone, PartialEq, Eq, PartialOrd, Ord)]
+pub struct Regular<T: Debug + Clone + Eq> {
+    value: T,
+}
+impl<T: Debug + Clone + Eq> Regular<T> {
+    pub fn new(value: T) -> Self {
+        Self { value }
     }
 }
 
-/// Semi regular
-impl<T> Drop for Singleton<T> {
-    fn drop(&mut self) {}
+#[derive(Debug, Clone, PartialEq, Eq, PartialOrd, Ord)]
+pub struct TotallyOrdered<T: Debug + Clone + Eq + Ord> {
+    value: T,
 }
-
-/// Regular
-impl<T> PartialEq for Singleton<T>
-where
-    T: PartialEq,
-{
-    fn eq(&self, x: &Self) -> bool {
-        self.value.eq(&x.value)
-    }
-}
-
-/// Regular
-impl<T> Eq for Singleton<T> where T: Eq {}
-
-/// Totally-ordered
-impl<T> PartialOrd for Singleton<T>
-where
-    T: PartialOrd,
-{
-    fn partial_cmp(&self, x: &Self) -> Option<std::cmp::Ordering> {
-        self.value.partial_cmp(&x.value)
-    }
-}
-
-/// Totally-ordered
-impl<T> Ord for Singleton<T>
-where
-    T: Ord,
-{
-    fn cmp(&self, x: &Self) -> std::cmp::Ordering {
-        self.value.cmp(&x.value)
+impl<T: Debug + Clone + Eq + Ord> TotallyOrdered<T> {
+    pub fn new(value: T) -> Self {
+        Self { value }
     }
 }
