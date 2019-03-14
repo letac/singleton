@@ -1,6 +1,6 @@
 [package]
 name = "singleton-stepanov"
-version = "1.0.0"
+version = "1.0.1"
 authors = ["Strahinja Popovic <stralep@gmail.com>"]
 edition = "2018"
 
