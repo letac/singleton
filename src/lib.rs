@@ -1,7 +1,7 @@
 use std::fmt::Debug;
 
 #[derive(Debug, Clone, PartialEq, Eq, PartialOrd, Ord)]
-pub struct Singleton<T: Debug> {
+pub struct Singleton<T> {
     value: T,
 }
 impl<T: Debug> Singleton<T> {
@@ -11,7 +11,7 @@ impl<T: Debug> Singleton<T> {
 }
 
 #[derive(Debug, Clone, PartialEq, Eq, PartialOrd, Ord)]
-pub struct SemiRegular<T: Debug + Clone> {
+pub struct SemiRegular<T> {
     value: T,
 }
 impl<T: Debug + Clone> SemiRegular<T> {
@@ -21,7 +21,7 @@ impl<T: Debug + Clone> SemiRegular<T> {
 }
 
 #[derive(Debug, Clone, PartialEq, Eq, PartialOrd, Ord)]
-pub struct Regular<T: Debug + Clone + Eq> {
+pub struct Regular<T> {
     value: T,
 }
 impl<T: Debug + Clone + Eq> Regular<T> {
@@ -31,7 +31,7 @@ impl<T: Debug + Clone + Eq> Regular<T> {
 }
 
 #[derive(Debug, Clone, PartialEq, Eq, PartialOrd, Ord)]
-pub struct TotallyOrdered<T: Debug + Clone + Eq + Ord> {
+pub struct TotallyOrdered<T> {
     value: T,
 }
 impl<T: Debug + Clone + Eq + Ord> TotallyOrdered<T> {
